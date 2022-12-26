@@ -37,11 +37,11 @@ export class CoffeesService {
     return coffee;
   }
 
-  create(newCoffee: CreateCoffeeDto) {
-    // this.coffees.push(newCoffee);
+  create(newCoffee: any) {
+    this.coffees.push(newCoffee);
   }
 
-  update(id: string, updatedCoffee: UpdateCoffeeDto) {
+  update(id: string, updatedCoffee: any) {
     const existingCoffee = this.findOne(id);
     if (existingCoffee) {
       // IMPLEMENT HERE
